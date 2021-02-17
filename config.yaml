@@ -6,6 +6,9 @@ googleAnalytics: UA-123456789-1
 
 taxonomies:
   tag: tags
+  group: groups
+  option: options
+  variable: variables
 
 permalinks:
   post: /:filename/
