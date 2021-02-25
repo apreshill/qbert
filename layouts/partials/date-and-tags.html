@@ -1,11 +1,34 @@
-{{ $dateTime := .PublishDate.Format "2006-01-02" }}
-{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-<i data-feather="calendar"></i> <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-{{ with .Params.tags }}
+{{ with (.GetTerms "groups") }}
   <br>
   <i data-feather="tag"></i>
   {{ range . }}
-  {{ $href := print (absURL "tags/") (urlize .) }}
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
   {{ end }}
 {{ end }}
+
+{{ with (.GetTerms "groups") }}
+  <br>
+  {{ range . }}
+  <i data-feather="tag"></i>
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    {{ with (index .Site.Data.groups .LinkTitle) }}
+      <details><summary>YAML fields</summary>
+        <p class="text-monospace">{{ delimit (union .pandoc_options .quarto_options) ", " }}</p>
+      </details>
+    {{ end }}
+  <br>
+  {{ end }}
+{{ end }}
+
+{{ with (.GetTerms "options") }}
+  <br>
+  <i data-feather="folder-plus"></i>
+  {{ range . }}
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+  {{ end }}
+  <br>
+{{ end }}
+
+
+
+

@@ -6,9 +6,8 @@ googleAnalytics: UA-123456789-1
 
 taxonomies:
   tag: tags
-  group: groups
-  option: options
-  variable: variables
+  groups: groups
+  options: options
 
 permalinks:
   post: /:filename/
@@ -17,8 +16,8 @@ permalinks:
 # The value of pre is the icon name
 menu:
   nav:
-  - name: Home
-    pre: home
+  - name: Quarto
+    pre: grid
     url: /
     weight: 1
   - name: Blog
@@ -29,13 +28,13 @@ menu:
     pre: tag
     url: /tags/
     weight: 3
-  - name: About
-    pre: smile
-    url: /about/
+  - name: Notes
+    pre: message-circle
+    url: /notes/
     weight: 4
-  - name: Docs
-    pre:
-    url: /docs/
+  - name: Formats
+    pre: bookmark
+    url: /formats/
     weight: 5
 
 params:

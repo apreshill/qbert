@@ -1,6 +1,6 @@
 ---
 title: html
-groups: [toc, metadata]
+groups: metadata
 options: [html-math-method, self-contained, ascii]
 variables: [document-css]
 ---

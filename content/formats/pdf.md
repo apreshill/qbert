@@ -1,6 +1,6 @@
 ---
 title: pdf
-groups: [classoption, geometry, colorlinks, bib, metadata]
+groups: [metadata, bib]
 options: [html-math-method, foo]
 ---
 

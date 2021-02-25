@@ -38,4 +38,14 @@
 
 {{ .Content }}
 
+{{ printf "show those used"}}
+{{ if .Params.groups }}
+  {{ $grp := .Params.groups }}
+  {{ with (index .Site.Data.groups $grp) }}
+    <h3>{{ .title }}</h3>
+    <h4>{{ printf "Pandoc options:" }}</h4>{{ delimit .pandoc_options ", " }}
+    <h4>{{ printf "Quarto options:" }}</h4>{{ delimit .quarto_options ", " }}
+  {{ end }}
+{{ end }}
+
 {{ end }}

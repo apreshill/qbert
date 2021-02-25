@@ -1,0 +1,16 @@
+toc:
+  title: toc
+  alias: table-of-contents
+  pandoc_options: [toc-depth, number-sections]
+  quarto_options: [toc-float]
+
+metadata:
+  title: metadata
+  pandoc_options: [title, author, date, subtitle, abstract, keywords, subject, description, category]
+  quarto_options: []
+  man: https://pandoc.org/MANUAL.html#metadata-variables
+
+bib:
+  title: bib
+  pandoc_options: [biblatexoptions, biblio-style, biblio-title, bibliography, natbiboptions]
+  man: https://pandoc.org/MANUAL.html#biblatex-bibliographies

@@ -10,4 +10,12 @@
   </p>
 {{ end }}
 
+<h1>All groups</h1>
+{{ $yml := .Site.Data.groups }}
+{{ with $yml.toc }}
+  <h3>{{ .title }}</h3>
+  <h4>{{ printf "Pandoc options:" }}</h4>{{ delimit .pandoc_options ", " }}<br>
+  <h4>{{ printf "Quarto options:" }}</h4>{{ delimit .quarto_options ", " }}
+{{ end }}
+
 {{ end }}

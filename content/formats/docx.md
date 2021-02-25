@@ -1,6 +1,6 @@
 ---
 title: docx
-groups: [toc, number-sections, metadata]
+groups: toc
 options: [reference-doc]
 ---
 
