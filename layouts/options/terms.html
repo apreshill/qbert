@@ -2,7 +2,7 @@
 
 <h1>{{ .Title }}</h1>
 
-{{ $taxo := "groups" }}
+{{ $taxo := "options" }}
 <ul class="{{ $taxo }}">
     {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
         {{ range .Pages }}

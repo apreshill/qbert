@@ -1,0 +1,4 @@
+---
+title: sitemap
+type: sitemap
+---
